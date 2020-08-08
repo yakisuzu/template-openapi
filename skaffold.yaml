@@ -1,0 +1,15 @@
+apiVersion: skaffold/v2beta2
+kind: Config
+build:
+  artifacts:
+  - image: template-openapi
+    context: mock
+    docker:
+      noCache: false
+  local:
+    push: false
+    useBuildkit: true
+deploy:
+  kubectl:
+    manifests:
+    - k8s/mock/*.yaml

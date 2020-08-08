@@ -1,0 +1,10 @@
+get:
+  summary: ユーザー情報
+  operationId: user
+  tags:
+    - user
+  responses:
+    '200':
+      $ref: "v1/user/get-200.yaml"
+    default:
+      $ref: "error.yaml"

@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: template-openapi
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      application: template-openapi
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        application: template-openapi
+        tier: template-openapi
+      annotations:
+        appVersion: v1.0
+    spec:
+      containers:
+      - name: template-openapi
+        image: template-openapi
+        imagePullPolicy: Never

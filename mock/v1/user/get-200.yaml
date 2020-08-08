@@ -1,0 +1,17 @@
+description: ユーザー情報
+content:
+  application/json:
+    schema:
+      type: array
+      items:
+        type: object
+        properties:
+          id:
+            type: integer
+          name:
+            type: string
+      example:
+        - id: 1
+          name: "user1"
+        - id: 2
+          name: "user2"

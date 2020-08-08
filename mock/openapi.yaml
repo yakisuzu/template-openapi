@@ -1,0 +1,9 @@
+openapi: "3.0.3"
+info:
+  title: TemplateOpenAPI
+  version: 1.0.0
+servers:
+  - url: http://localhost:8087
+paths:
+  /v1/user:
+    $ref: 'v1/user/pathItem.yaml'
